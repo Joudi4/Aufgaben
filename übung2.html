@@ -33,7 +33,42 @@
         function textVerkuerzen() {
             let text = eingabe.value;
             let laenge = prompt("Auf wie viele Zeichen verkuerzen?");
-        
+            let kurz = "";
+            for (let i = 0; i < laenge; i++) {
+                kurz = kurz + text.charAt(i);
+            }
+            kurz = kurz + "...";
+            ausgabe.innerHTML = "<br>Verkuerzt: " + kurz;
+        }
+        // Zeichen zaehlen
+        function zeichenZaehlen() {
+            let text = eingabe.value;
+            ausgabe.innerHTML = "<br>Anzahl Zeichen: " + text.length;
+        }
+        // Vokale ersetzen durch *
+        function vokaleErsetzen() {
+            let text = eingabe.value;
+            let neu = "";
+            for (let i = 0; i < text.length; i++) {
+                let zeichen = text.charAt(i);
+                if (zeichen == "a" || zeichen == "e" || zeichen == "i" || zeichen == "o" || zeichen == "u") {
+                    neu = neu + "*";
+                } else {
+                    neu = neu + zeichen;
+                }
+            }
+            ausgabe.innerHTML = "<br>Vokale ersetzt: " + neu;
+        }
+        // Text wiederholen
+        function textWiederholen() {
+            let text = eingabe.value;
+            let anzahl = prompt("Wie oft soll der Text wiederholt werden?");
+            let ergebnis = "";
+            for (let i = 0; i < anzahl; i++) {
+                ergebnis = ergebnis + text + " ";
+
+
+
 
     </script>
 </body>
