@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Text Tool</title>
+</head>
+
+<body>
+    <h1>Text Tool</h1>
+    Text eingeben:<br>
+    <textarea id="eingabe" rows="4" cols="50"></textarea>
+    <br><br>
+    <button onclick="textVerkuerzen()">Text verkuerzen</button>
+    <button onclick="zeichenZaehlen()">Zeichen zaehlen</button>
+    <button onclick="vokaleErsetzen()">Vokale ersetzen</button>
+    <button onclick="textWiederholen()">Text wiederholen</button>
+    <button onclick="abstaendeNormalisieren()">Abstaende normalisieren</button>
+    <button onclick="kleinbuchstaben()">Kleinbuchstaben anzeigen</button>
+    <button onclick="ersetzen()">Wort ersetzen</button>
+    <div id="ausgabe"></div>
+    <script>
+        let ausgabe = document.getElementById("ausgabe");
+        let eingabe = document.getElementById("eingabe");
+        // Wort ersetzen
+        function ersetzen() {
+            let text = eingabe.value;
+            let alt = prompt("Welches Wort soll ersetzt werden?");
+            let neu = prompt("Womit soll es ersetzt werden?");
+            ausgabe.innerHTML = "<br>Ersetzt: " + text.replace(alt, neu);
+        }
+        // Text verkuerzen
+        function textVerkuerzen() {
+            let text = eingabe.value;
+            let laenge = prompt("Auf wie viele Zeichen verkuerzen?");
+        
+
+    </script>
+</body>
+
+</html>
