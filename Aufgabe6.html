@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Text Tool</title>
+    <link rel="stylesheet" href="/CSS/Aufgabe6.css">
 </head>
 
 <body>
@@ -64,8 +65,44 @@
             let text = eingabe.value;
             let anzahl = prompt("Wie oft soll der Text wiederholt werden?");
             let ergebnis = "";
+
             for (let i = 0; i < anzahl; i++) {
                 ergebnis = ergebnis + text + " ";
+
+            }
+            ausgabe.innerHTML = "<br>Wiederholt: " + ergebnis;
+        }
+
+        //Abstaende normalisieren 
+        function abstaendeNormalisieren() {
+            let text = eingabe.value;
+            let buchstaben = text.split("");
+            let ergebnis = "";
+            for (let i = 0; i < buchstaben.length; i++) {
+
+                if (woerter[i] != "") {
+                    ergebnis = ergebnis + woerter[i] + "";
+                }
+
+            }
+
+        }
+
+        //Kleinbuchstaben
+        function kleinbuchstaben() {
+            let text = eingabe.value;
+            let ergebnis = "";
+
+            for (let i = 0; i < text.length; i++) {
+                if (text[i] === text[i].toLowerCase() && text[i] !== text[i].toUpperCase()) {
+                    ergebnis += text[i];
+                }
+            }
+
+            ausgabe.innerHTML = ergebnis;
+        }
+
+
 
 
 
